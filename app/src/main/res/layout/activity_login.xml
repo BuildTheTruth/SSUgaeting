@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/iv_ssuLogo"
+            android:src="@drawable/ssu_logo"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/logo" />
+
+        <ImageView
+            android:id="@+id/iv_appName"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:contentDescription="@string/appName"
+            android:src="@drawable/app_name" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_inputID"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/userId" />
+
+            <EditText
+                android:id="@+id/et_inputPW"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/password" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorButton"
+            android:baselineAligned="false"
+            android:text="@string/login"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#ffffffff"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        android:paddingStart="36dp"
+        android:paddingEnd="36dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_id"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/search_pw"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
