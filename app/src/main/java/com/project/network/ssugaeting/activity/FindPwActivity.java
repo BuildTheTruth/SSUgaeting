@@ -1,9 +1,11 @@
-package com.project.network.ssugaeting;
+package com.project.network.ssugaeting.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class FindPWActivity extends AppCompatActivity {
+import com.project.network.ssugaeting.R;
+
+public class FindPwActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

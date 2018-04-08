@@ -1,7 +1,9 @@
-package com.project.network.ssugaeting;
+package com.project.network.ssugaeting.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.project.network.ssugaeting.R;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -12,7 +12,7 @@
         android:layout_marginBottom="24dp"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="비밀번호 찾기"
+        android:text="@string/search_pw"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -23,7 +23,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:inputType="text"
-        android:hint="@string/userId"/>
+        android:hint="@string/user_id"/>
 
     <EditText
         android:id="@+id/et_emailForPw"
@@ -32,7 +32,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:inputType="textEmailAddress"
-        android:hint="@string/email"/>
+        android:hint="@string/user_email"/>
 
     <TableLayout
         android:layout_width="match_parent"

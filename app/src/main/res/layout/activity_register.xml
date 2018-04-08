@@ -25,7 +25,7 @@
             android:id="@+id/et_regID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/userId"
+            android:hint="@string/user_id"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true" />
@@ -40,7 +40,7 @@
             android:id="@+id/et_regPW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password"
+            android:hint="@string/user_password"
             android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true" />
@@ -50,7 +50,7 @@
             android:id="@+id/et_regPWC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/passwordCheck"
+            android:hint="@string/password_check"
             android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true" />
@@ -65,7 +65,7 @@
             android:id="@+id/et_regName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/userName"
+            android:hint="@string/user_name"
             android:inputType="text"
             android:maxLines="1"
             android:singleLine="true" />
@@ -74,7 +74,7 @@
             android:id="@+id/et_regEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email"
+            android:hint="@string/user_email"
             android:imeOptions="actionUnspecified"
             android:inputType="textEmailAddress"
             android:maxLines="1"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:paddingEnd="6dp"
                 android:paddingStart="6dp"
-                android:text="@string/userSex"
+                android:text="@string/user_sex"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -113,35 +113,39 @@
 
         </LinearLayout>
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
             android:paddingBottom="24dp"
-            android:stretchColumns="0,1">
+            android:paddingTop="24dp">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <Button
+                android:id="@+id/bt_regConfirm"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:text="@string/confirm"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/bt_regConfirm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/confirm"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+            <Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
 
-                <Button
-                    android:id="@+id/bt_regCancel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/cancel"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </TableRow>
+            <Button
+                android:id="@+id/bt_regCancel"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:text="@string/cancel"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        </TableLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -1,13 +1,15 @@
-package com.project.network.ssugaeting;
+package com.project.network.ssugaeting.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class RegisterActivity extends AppCompatActivity {
+import com.project.network.ssugaeting.R;
+
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_splash);
     }
 }

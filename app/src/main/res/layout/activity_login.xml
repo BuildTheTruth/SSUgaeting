@@ -19,14 +19,12 @@
             android:id="@+id/iv_ssuLogo"
             android:src="@drawable/ssu_logo"
             android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:contentDescription="@string/logo" />
+            android:layout_height="50dp"/>
 
         <ImageView
             android:id="@+id/iv_appName"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:contentDescription="@string/appName"
             android:src="@drawable/app_name" />
 
     </LinearLayout>
@@ -46,20 +44,20 @@
                 android:id="@+id/et_inputID"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/userId" />
+                android:hint="@string/user_id" />
 
             <EditText
                 android:id="@+id/et_inputPW"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/password" />
+                android:hint="@string/user_password" />
         </LinearLayout>
 
         <Button
             android:id="@+id/bt_login"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorButton"
+            android:background="@drawable/buttonshape"
             android:baselineAligned="false"
             android:text="@string/login"
             android:textSize="18sp"
