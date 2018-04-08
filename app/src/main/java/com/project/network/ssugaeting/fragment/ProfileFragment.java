@@ -35,8 +35,16 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile_list, container, false);
         profileList = (ListView) view.findViewById(R.id.rv_profileList);
         adapter=new ProfileAdapter(getContext());
-        adapter.addItem(new Profile("용현", "俺はこの世界を支配する男だぜ"));
-        adapter.addItem(new Profile("용현", "나는 이 세계를 지배할 남자다."));
+        adapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
+        adapter.addItem(new Profile("김용현", "나는 이 세계를 지배할 남자다."));
+        adapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
+        adapter.addItem(new Profile("김용현", "나는 이 세계를 지배할 남자다."));
+        adapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
+        adapter.addItem(new Profile("김용현", "나는 이 세계를 지배할 남자다."));
+        adapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
+        adapter.addItem(new Profile("김용현", "나는 이 세계를 지배할 남자다."));
+        adapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
+        adapter.addItem(new Profile("김용현", "나는 이 세계를 지배할 남자다."));
         profileList.setAdapter(adapter);
 
         return view;

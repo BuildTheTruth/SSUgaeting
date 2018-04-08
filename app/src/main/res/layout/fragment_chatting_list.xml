@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/rv_chatList"
     android:name="com.project.network.ssugaeting.ChatFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.project.network.ssugaeting.fragment.ChatFragment"
-    tools:listitem="@layout/item_chat" />
+    tools:context="com.project.network.ssugaeting.fragment.ChattingFragment"
+    tools:listitem="@layout/item_chatting" />

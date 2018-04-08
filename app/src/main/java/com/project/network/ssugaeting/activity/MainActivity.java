@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.project.network.ssugaeting.R;
-import com.project.network.ssugaeting.fragment.ChatFragment;
+import com.project.network.ssugaeting.fragment.ChattingFragment;
 import com.project.network.ssugaeting.fragment.ProfileFragment;
 import com.project.network.ssugaeting.fragment.SettingFragment;
 
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 case 0:
                     return ProfileFragment.newInstance();
                 case 1:
-                    return ChatFragment.newInstance();
+                    return ChattingFragment.newInstance();
                 case 2:
                     return SettingFragment.newInstance();
             }

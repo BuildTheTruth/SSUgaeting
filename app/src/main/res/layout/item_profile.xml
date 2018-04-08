@@ -25,10 +25,13 @@
         android:id="@+id/tv_userStateMsg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:text="@string/user_state_message"
-        android:textSize="12sp"
         android:textColor="#7e7e7e"
         android:textAppearance="?attr/textAppearanceListItem"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="12sp"
         android:gravity="right"/>
 
 

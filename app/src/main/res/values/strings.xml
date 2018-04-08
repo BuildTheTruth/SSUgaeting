@@ -27,7 +27,10 @@
     <string name="female">여성</string>
     <string name="confirm">확인</string>
     <string name="cancel">취소</string>
-    
+
+    <!-- Test Chatting Message -->
+    <string name="chat_message">채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지 채팅 메시지</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
