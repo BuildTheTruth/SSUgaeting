@@ -122,10 +122,10 @@
             android:paddingTop="24dp">
 
             <Button
-                android:id="@+id/bt_regConfirm"
+                android:id="@+id/btn_regConfirm"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/button_shape"
                 android:text="@string/confirm"
                 android:textColor="#ffffffff"
                 android:textSize="18sp"
@@ -136,10 +136,10 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/bt_regCancel"
+                android:id="@+id/btn_regCancel"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/buttonshape"
+                android:background="@drawable/button_shape"
                 android:text="@string/cancel"
                 android:textColor="#ffffffff"
                 android:textSize="18sp"

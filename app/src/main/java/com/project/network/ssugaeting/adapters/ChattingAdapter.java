@@ -14,11 +14,11 @@ import java.util.ArrayList;
  * Created by Jin on 2018-04-08.
  */
 
-public class ChatAdapter extends BaseAdapter {
+public class ChattingAdapter extends BaseAdapter {
     private ArrayList<Chatting> items = new ArrayList<Chatting>();
     Context context;
 
-    public ChatAdapter(Context context) {
+    public ChattingAdapter(Context context) {
         this.context = context;
     }
 

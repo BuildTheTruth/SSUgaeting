@@ -16,9 +16,9 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class ProfileView extends LinearLayout {
-    TextView userName;
-    TextView userStateMsg;
-    CircleImageView userPhoto;
+    TextView userNameText;
+    TextView userStateMsgText;
+    CircleImageView userPhotoImage;
 
     public ProfileView(Context context) {
         super(context);
@@ -34,17 +34,17 @@ public class ProfileView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.item_profile, this, true);
 
-        userName = (TextView) findViewById(R.id.tv_userName);
-        userStateMsg = (TextView) findViewById(R.id.tv_userStateMsg);
-        userPhoto = (CircleImageView) findViewById(R.id.iv_userPhoto);
+        userNameText = (TextView) findViewById(R.id.tv_userName);
+        userStateMsgText = (TextView) findViewById(R.id.tv_userStateMsg);
+        userPhotoImage = (CircleImageView) findViewById(R.id.iv_userPhoto);
     }
 
     public void setName(String name) {
-        userName.setText(name);
+        userNameText.setText(name);
     }
 
     public void setStateMsg(String stateMsg) {
-        userStateMsg.setText(stateMsg);
+        userStateMsgText.setText(stateMsg);
     }
 
     public void setImageURL(Context context, String imageURL) {

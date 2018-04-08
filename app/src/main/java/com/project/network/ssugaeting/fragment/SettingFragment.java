@@ -8,12 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.project.network.ssugaeting.R;
-import com.project.network.ssugaeting.adapters.ChatAdapter;
+import com.project.network.ssugaeting.adapters.ChattingAdapter;
 
 public class SettingFragment extends Fragment {
-
-    private ChatAdapter adapter;
-    private ListView chatList;
 
     public SettingFragment() {
     }

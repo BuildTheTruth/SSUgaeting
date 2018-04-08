@@ -1,12 +1,12 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.project.network.ssugaeting.fragment.SettingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -26,10 +26,10 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:stretchColumns="0, 1">
+                android:padding="16dp">
 
                 <TableRow
+                    android:id="@+id/tr_setName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -43,6 +43,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="김용현"
@@ -57,6 +58,37 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/user_sex"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mySex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="남성"
+                        android:textSize="16sp" />
+
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.3"
+                    android:background="@drawable/border_line" />
+
+
+                <TableRow
+                    android:id="@+id/tr_setStateMsg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -70,11 +102,12 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:id="@+id/tv_myStateMsg"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="나는 이 세계를 지배할 남자다."
                         android:layout_gravity="center_vertical"
                         android:maxLines="2"
+                        android:text="나는 이 세계를 지배할 남자다."
                         android:textSize="12sp" />
                 </TableRow>
 
@@ -85,6 +118,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -98,6 +132,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="23"
@@ -112,6 +147,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setHeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -125,6 +161,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myHeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="180"
@@ -138,6 +175,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -151,6 +189,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="서울시 상도동"
@@ -165,6 +204,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setHobby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -178,6 +218,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myHobby"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="사진 찍기"
@@ -192,6 +233,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setOccupation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -205,6 +247,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myOccupation"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="대학생"
@@ -219,6 +262,7 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
+                    android:id="@+id/tr_setPosition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -232,6 +276,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_myPosition"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="숭실대학교 컴퓨터학부"
@@ -242,18 +287,20 @@
 
         </LinearLayout>
 
-
         <Button
-            android:id="@+id/bt_modifyProfile"
+            android:id="@+id/btn_modifyProfile"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_margin="8dp"
-            android:background="@drawable/buttonshape"
-            android:padding="8dp"
+            android:background="@drawable/button_shape"
             android:text="프로필 수정"
             android:textColor="#ffffffff"
             android:textSize="16sp"
             android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="36dp" />
 
     </LinearLayout>
 

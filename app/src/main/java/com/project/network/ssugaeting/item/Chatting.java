@@ -1,10 +1,13 @@
 package com.project.network.ssugaeting.item;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Jin on 2018-04-08.
  */
 
-public class Chatting {
+public class Chatting implements Parcelable {
     private String opponentId;
     private String opponentName;
     private String opponentMsg;
@@ -31,6 +34,46 @@ public class Chatting {
         this.time = time;
         this.count = count;
     }
+
+    protected Chatting(Parcel in) {
+        opponentId = in.readString();
+        opponentName = in.readString();
+        opponentMsg = in.readString();
+        opponentImageURL = in.readString();
+        myMsg = in.readString();
+        message = in.readString();
+        time = in.readString();
+        count = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(opponentId);
+        dest.writeString(opponentName);
+        dest.writeString(opponentMsg);
+        dest.writeString(opponentImageURL);
+        dest.writeString(myMsg);
+        dest.writeString(message);
+        dest.writeString(time);
+        dest.writeInt(count);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Chatting> CREATOR = new Creator<Chatting>() {
+        @Override
+        public Chatting createFromParcel(Parcel in) {
+            return new Chatting(in);
+        }
+
+        @Override
+        public Chatting[] newArray(int size) {
+            return new Chatting[size];
+        }
+    };
 
     public void setOpponentId(String opponentId) {
         this.opponentId = opponentId;

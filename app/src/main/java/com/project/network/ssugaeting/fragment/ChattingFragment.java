@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.project.network.ssugaeting.R;
-import com.project.network.ssugaeting.adapters.ChatAdapter;
+import com.project.network.ssugaeting.adapters.ChattingAdapter;
 import com.project.network.ssugaeting.item.Chatting;
 
 public class ChattingFragment extends Fragment {
 
-    private ChatAdapter adapter;
+    private ChattingAdapter chattingAdapter;
     private ListView chatList;
 
     public ChattingFragment() {
@@ -33,10 +33,10 @@ public class ChattingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chatting_list, container, false);
         chatList = (ListView) view.findViewById(R.id.rv_chatList);
-        adapter=new ChatAdapter(getContext());
-        adapter.addItem(new Chatting("김용현", "俺はこの世界を支配する男だぜ","오후 12:00", 27));
-        adapter.addItem(new Chatting("김용현", "나는 이 세계를 지배할 남자다.", "2018/4/7", 246));
-        chatList.setAdapter(adapter);
+        chattingAdapter=new ChattingAdapter(getContext());
+        chattingAdapter.addItem(new Chatting("김용현", "俺はこの世界を支配する男だぜ","오후 12:00", 27));
+        chattingAdapter.addItem(new Chatting("김용현", "나는 이 세계를 지배할 남자다.", "2018/4/7", 246));
+        chatList.setAdapter(chattingAdapter);
 
         return view;
     }

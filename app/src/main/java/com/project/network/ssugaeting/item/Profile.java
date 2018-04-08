@@ -1,15 +1,19 @@
 package com.project.network.ssugaeting.item;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by Jin on 2018-04-07.
  */
 
-public class Profile {
+public class Profile  implements Parcelable {
     // Essential Information
     private String id;
     private String password;
     private String email;
     private String name;
+    private String sex;
     // Additional Information
     private String stateMsg;
     private String age;
@@ -25,11 +29,12 @@ public class Profile {
         this.stateMsg=stateMsg;
     }
 
-    public Profile(String id, String password, String email, String name, String stateMsg, String age, String height, String address, String hobby, String occupation, String position, String imageURL) {
+    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String occupation, String position, String imageURL) {
         this.id = id;
         this.password = password;
         this.email = email;
         this.name = name;
+        this.sex = sex;
         this.stateMsg = stateMsg;
         this.age = age;
         this.height = height;
@@ -39,6 +44,34 @@ public class Profile {
         this.position = position;
         this.imageURL = imageURL;
     }
+
+    protected Profile(Parcel in) {
+        id = in.readString();
+        password = in.readString();
+        email = in.readString();
+        name = in.readString();
+        sex = in.readString();
+        stateMsg = in.readString();
+        age = in.readString();
+        height = in.readString();
+        address = in.readString();
+        hobby = in.readString();
+        occupation = in.readString();
+        position = in.readString();
+        imageURL = in.readString();
+    }
+
+    public static final Creator<Profile> CREATOR = new Creator<Profile>() {
+        @Override
+        public Profile createFromParcel(Parcel in) {
+            return new Profile(in);
+        }
+
+        @Override
+        public Profile[] newArray(int size) {
+            return new Profile[size];
+        }
+    };
 
     public void setId(String id) {
         this.id = id;
@@ -54,6 +87,10 @@ public class Profile {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public void setStateMsg(String stateMsg) {
@@ -104,6 +141,10 @@ public class Profile {
         return name;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
     public String getStateMsg() {
         return stateMsg;
     }
@@ -134,5 +175,27 @@ public class Profile {
 
     public String getImageURL() {
         return imageURL;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(password);
+        dest.writeString(email);
+        dest.writeString(name);
+        dest.writeString(sex);
+        dest.writeString(stateMsg);
+        dest.writeString(age);
+        dest.writeString(height);
+        dest.writeString(address);
+        dest.writeString(hobby);
+        dest.writeString(occupation);
+        dest.writeString(position);
+        dest.writeString(imageURL);
     }
 }

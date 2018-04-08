@@ -15,11 +15,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 
 public class ChattingView extends LinearLayout {
-    TextView userName;
-    TextView userMessage;
-    TextView msgTime;
-    TextView msgCount;
-    CircleImageView userPhoto;
+    TextView userNameText;
+    TextView userMessageText;
+    TextView msgTimeText;
+    TextView msgCountText;
+    CircleImageView userPhotoImage;
 
     public ChattingView(Context context) {
         super(context);
@@ -35,20 +35,20 @@ public class ChattingView extends LinearLayout {
         LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.item_chatting, this, true);
 
-        userName=(TextView)findViewById(R.id.tv_chatName);
-        userMessage=(TextView)findViewById(R.id.tv_chatMsg);
-        msgTime=(TextView)findViewById(R.id.tv_chatTime);
-        msgCount=(TextView)findViewById(R.id.tv_chatCnt);
-        userPhoto=(CircleImageView)findViewById(R.id.iv_chatPhoto);
+        userNameText=(TextView)findViewById(R.id.tv_chatName);
+        userMessageText=(TextView)findViewById(R.id.tv_chatMsg);
+        msgTimeText=(TextView)findViewById(R.id.tv_chatTime);
+        msgCountText=(TextView)findViewById(R.id.tv_chatCnt);
+        userPhotoImage=(CircleImageView)findViewById(R.id.iv_chatPhoto);
     }
 
-    public void setOpponentName(String name) { userName.setText(name); }
+    public void setOpponentName(String name) { userNameText.setText(name); }
 
-    public void setMessage(String message) { userMessage.setText(message); }
+    public void setMessage(String message) { userMessageText.setText(message); }
 
-    public void setTime(String time) { msgTime.setText(time); }
+    public void setTime(String time) { msgTimeText.setText(time); }
 
-    public void setCount(int count) { msgCount.setText(""+count); }
+    public void setCount(int count) { msgCountText.setText(""+count); }
 
     public void setOpponentImageURL(Context context, String imageURL) {
         // Define here after server is connected.
