@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.project.network.ssugaeting.fragment.SettingFragment">
+    tools:context="com.project.network.ssugaeting.fragment.MyProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,6 @@
                 android:padding="16dp">
 
                 <TableRow
-                    android:id="@+id/tr_setName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -58,7 +57,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setSex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -88,7 +86,6 @@
 
 
                 <TableRow
-                    android:id="@+id/tr_setStateMsg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -118,7 +115,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setAge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -147,7 +143,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setHeight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -175,7 +170,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -204,7 +198,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setHobby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -233,7 +226,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setOccupation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -242,15 +234,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="@string/user_occupation"
+                        android:text="@string/user_university"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/tv_myOccupation"
+                        android:id="@+id/tv_myUniversity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="대학생"
+                        android:text="숭실대학교"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -262,7 +254,6 @@
                     android:background="@drawable/border_line" />
 
                 <TableRow
-                    android:id="@+id/tr_setPosition"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="4dp">
@@ -271,15 +262,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="@string/user_position"
+                        android:text="@string/user_major"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/tv_myPosition"
+                        android:id="@+id/tv_myMajor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="숭실대학교 컴퓨터학부"
+                        android:text="컴퓨터학부"
                         android:textSize="16sp" />
                 </TableRow>
 

@@ -17,8 +17,8 @@
     <string name="user_age">나이</string>
     <string name="user_address">주소</string>
     <string name="user_hobby">취미</string>
-    <string name="user_occupation">직업</string>
-    <string name="user_position">소속</string>
+    <string name="user_university">대학</string>
+    <string name="user_major">전공</string>
     <string name="user_height">키</string>
     <string name="user_state_message">상태메시지</string>
     <!-- User Information -->

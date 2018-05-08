@@ -20,8 +20,8 @@ public class Profile  implements Parcelable {
     private String height;
     private String address;
     private String hobby;
-    private String occupation;
-    private String position;
+    private String university;
+    private String major;
     private String imageURL;
 
     public Profile(String name, String stateMsg) {
@@ -29,7 +29,7 @@ public class Profile  implements Parcelable {
         this.stateMsg=stateMsg;
     }
 
-    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String occupation, String position, String imageURL) {
+    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String university, String major, String imageURL) {
         this.id = id;
         this.password = password;
         this.email = email;
@@ -40,8 +40,8 @@ public class Profile  implements Parcelable {
         this.height = height;
         this.address = address;
         this.hobby = hobby;
-        this.occupation = occupation;
-        this.position = position;
+        this.university = university;
+        this.major = major;
         this.imageURL = imageURL;
     }
 
@@ -56,8 +56,8 @@ public class Profile  implements Parcelable {
         height = in.readString();
         address = in.readString();
         hobby = in.readString();
-        occupation = in.readString();
-        position = in.readString();
+        university = in.readString();
+        major = in.readString();
         imageURL = in.readString();
     }
 
@@ -113,12 +113,12 @@ public class Profile  implements Parcelable {
         this.hobby = hobby;
     }
 
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
+    public void setUniversity(String university) {
+        this.university = university;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setMajor(String major) {
+        this.major = major;
     }
 
     public void setImageURL(String imageURL) {
@@ -165,12 +165,12 @@ public class Profile  implements Parcelable {
         return hobby;
     }
 
-    public String getOccupation() {
-        return occupation;
+    public String getUniversity() {
+        return university;
     }
 
-    public String getPosition() {
-        return position;
+    public String getMajor() {
+        return major;
     }
 
     public String getImageURL() {
@@ -194,8 +194,8 @@ public class Profile  implements Parcelable {
         dest.writeString(height);
         dest.writeString(address);
         dest.writeString(hobby);
-        dest.writeString(occupation);
-        dest.writeString(position);
+        dest.writeString(university);
+        dest.writeString(major);
         dest.writeString(imageURL);
     }
 }

@@ -38,7 +38,7 @@ public class ProfileFragment extends Fragment {
         profileList = (ListView) view.findViewById(R.id.rv_profileList);
         profileAdapter = new ProfileAdapter(getContext());
         profileAdapter.addItem(new Profile("김용현", "俺はこの世界を支配する男だぜ"));
-        profileAdapter.addItem(new Profile("id", "password", "email", "용현", "남성", "나는 남자다.", "23", "180", "서울시", "사진", "대학생", "숭실대", "url"));
+        profileAdapter.addItem(new Profile("id", "password", "email", "용현", "남성", "나는 남자다.", "23", "180", "서울시", "사진", "숭실대", "컴퓨터학부", "url"));
         profileList.setAdapter(profileAdapter);
 
         profileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

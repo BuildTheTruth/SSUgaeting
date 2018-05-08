@@ -34,8 +34,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileName"
+                <EditText
+                    android:id="@+id/et_profileName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -61,8 +61,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileSex"
+                <EditText
+                    android:id="@+id/et_profileSex"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -88,8 +88,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileStateMsg"
+                <EditText
+                    android:id="@+id/et_profileStateMsg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -116,8 +116,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileAge"
+                <EditText
+                    android:id="@+id/et_profileAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -143,8 +143,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileHeight"
+                <EditText
+                    android:id="@+id/et_profileHeight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -169,8 +169,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileAddress"
+                <EditText
+                    android:id="@+id/et_profileAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -196,8 +196,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileHobby"
+                <EditText
+                    android:id="@+id/et_profileHobby"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -223,8 +223,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileUniversity"
+                <EditText
+                    android:id="@+id/et_profileUniversity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />
@@ -250,8 +250,8 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/tv_profileMajor"
+                <EditText
+                    android:id="@+id/et_profileMajor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp" />

@@ -27,8 +27,8 @@ public class ProfileActivity extends AppCompatActivity {
         final TextView proHeightText=(TextView)findViewById(R.id.tv_profileHeight);
         final TextView proAddressText=(TextView)findViewById(R.id.tv_profileAddress);
         final TextView proHobbyText=(TextView)findViewById(R.id.tv_profileHobby);
-        final TextView proOccupationText=(TextView)findViewById(R.id.tv_profileOccupation);
-        final TextView proPositionText=(TextView)findViewById(R.id.tv_profilePosition);
+        final TextView proUniversityText=(TextView)findViewById(R.id.tv_profileUniversity);
+        final TextView proMajorText=(TextView)findViewById(R.id.tv_profileMajor);
 
         final Button connReqButton=(Button)findViewById(R.id.btn_connectRequest);
         final Button cancelButton=(Button)findViewById(R.id.btn_profileCancel);
@@ -46,8 +46,8 @@ public class ProfileActivity extends AppCompatActivity {
         proHeightText.setText(mProfile.getHeight());
         proAddressText.setText(mProfile.getAddress());
         proHobbyText.setText(mProfile.getHobby());
-        proOccupationText.setText(mProfile.getOccupation());
-        proPositionText.setText(mProfile.getPosition());
+        proUniversityText.setText(mProfile.getUniversity());
+        proMajorText.setText(mProfile.getMajor());
 
         connReqButton.setOnClickListener(new View.OnClickListener(){
             @Override

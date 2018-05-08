@@ -21,7 +21,8 @@
         <activity android:name=".activity.FindIdActivity" />
         <activity android:name=".activity.FindPwActivity" />
         <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.ProfileActivity"></activity>
+        <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".activity.ProfileModifyActivity"></activity>
     </application>
 
 </manifest>

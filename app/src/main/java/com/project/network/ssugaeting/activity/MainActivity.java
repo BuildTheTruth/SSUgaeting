@@ -17,7 +17,7 @@ import android.view.View;
 import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.fragment.ChattingFragment;
 import com.project.network.ssugaeting.fragment.ProfileFragment;
-import com.project.network.ssugaeting.fragment.SettingFragment;
+import com.project.network.ssugaeting.fragment.MyProfileFragment;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
                 case 1:
                     return ChattingFragment.newInstance();
                 case 2:
-                    return SettingFragment.newInstance();
+                    return MyProfileFragment.newInstance();
             }
             return null;
         }
