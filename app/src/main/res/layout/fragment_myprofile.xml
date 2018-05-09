@@ -17,11 +17,10 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/iv_userPhoto"
+                android:id="@+id/iv_myPhoto"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_margin="16dp"
-                android:src="@drawable/yonghyeon" />
+                android:layout_margin="16dp" />
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -45,7 +44,6 @@
                         android:id="@+id/tv_myName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="김용현"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -73,7 +71,6 @@
                         android:id="@+id/tv_mySex"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="남성"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -104,7 +101,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:maxLines="2"
-                        android:text="나는 이 세계를 지배할 남자다."
                         android:textSize="12sp" />
                 </TableRow>
 
@@ -131,7 +127,6 @@
                         android:id="@+id/tv_myAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="23"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -159,7 +154,6 @@
                         android:id="@+id/tv_myHeight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="180"
                         android:textSize="16sp" />
                 </TableRow>
 
@@ -186,7 +180,6 @@
                         android:id="@+id/tv_myAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="서울시 상도동"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -214,7 +207,6 @@
                         android:id="@+id/tv_myHobby"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="사진 찍기"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -242,7 +234,6 @@
                         android:id="@+id/tv_myUniversity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="숭실대학교"
                         android:textSize="16sp" />
 
                 </TableRow>
@@ -270,7 +261,6 @@
                         android:id="@+id/tv_myMajor"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="컴퓨터학부"
                         android:textSize="16sp" />
                 </TableRow>
 
@@ -279,7 +269,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn_modifyProfile"
+            android:id="@+id/btn_profileModify"
             android:layout_width="160dp"
             android:layout_height="40dp"
             android:layout_margin="8dp"

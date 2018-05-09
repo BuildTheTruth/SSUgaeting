@@ -38,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         final Profile mProfile=intent.getParcelableExtra("SELECTED_PROFILE");
 
         // Set Profile Layout
-        proPhotoImage.setImageResource(R.drawable.yonghyeon); // Need Revision
+        proPhotoImage.setImageResource(R.drawable.yonghyeon); // Need Modify
         proNameText.setText(mProfile.getName());
         proSexText.setText(mProfile.getSex());
         proStateMsgText.setText(mProfile.getStateMsg());
