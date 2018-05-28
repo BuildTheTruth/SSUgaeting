@@ -14,43 +14,43 @@ import de.hdodenhof.circleimageview.CircleImageView;
  * Created by Jin on 2018-04-08.
  */
 
-public class ChattingView extends LinearLayout {
+public class ChatRoomView extends LinearLayout {
     TextView userNameText;
-    TextView userMessageText;
+    TextView userMsgText;
     TextView msgTimeText;
     TextView msgCountText;
     CircleImageView userPhotoImage;
 
-    public ChattingView(Context context) {
+    public ChatRoomView(Context context) {
         super(context);
         init(context);
     }
 
-    public ChattingView(Context context, AttributeSet attrs) {
+    public ChatRoomView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     private void init(Context context) {
         LayoutInflater inflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.item_chatting, this, true);
+        inflater.inflate(R.layout.item_chatroom, this, true);
 
         userNameText=(TextView)findViewById(R.id.tv_chatName);
-        userMessageText=(TextView)findViewById(R.id.tv_chatMsg);
+        userMsgText=(TextView)findViewById(R.id.tv_chatMsg);
         msgTimeText=(TextView)findViewById(R.id.tv_chatTime);
         msgCountText=(TextView)findViewById(R.id.tv_chatCnt);
         userPhotoImage=(CircleImageView)findViewById(R.id.iv_chatPhoto);
     }
 
-    public void setOpponentName(String name) { userNameText.setText(name); }
+    public void setUserName(String userName) { userNameText.setText(userName); }
 
-    public void setMessage(String message) { userMessageText.setText(message); }
+    public void setUserMsg(String userMsg) { userMsgText.setText(userMsg); }
 
-    public void setTime(String time) { msgTimeText.setText(time); }
+    public void setMsgTime(String msgTime) { msgTimeText.setText(msgTime); }
 
-    public void setCount(int count) { msgCountText.setText(""+count); }
+    public void setMsgCount(int msgCount) { msgCountText.setText(""+msgCount); }
 
-    public void setOpponentImageURL(Context context, String imageURL) {
+    public void setUserImageURL(Context context, String imageURL) {
         // Define here after server is connected.
     }
 

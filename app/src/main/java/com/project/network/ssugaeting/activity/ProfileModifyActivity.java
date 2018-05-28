@@ -1,58 +1,186 @@
 package com.project.network.ssugaeting.activity;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 
 import com.project.network.ssugaeting.R;
+import com.project.network.ssugaeting.databinding.ActivityProfileModifyBinding;
 import com.project.network.ssugaeting.item.Profile;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 public class ProfileModifyActivity extends AppCompatActivity {
+    final String[] religionArray = {"미선택", "기독교", "천주교", "불교", "원불교", "무교"};
+    final String[] hobbyArray = {"미선택", "독서", "운동", "게임", "영화", "음악",
+            "악기연주", "드라마", "프로그래밍", "드라이브", "카페",
+            "맛집탐방", "외국어", "사진", "봉사", "요리", "그림"};
+    final String[] collegeArray = {"미선택", "인문대학", "자연과학대학", "법과대학", "사회과학대학",
+            "경제통상대학", "경영대학", "공과대학", "IT대학"};
+    final String[] circleArray = {"미선택", "학생회", "운동", "미술", "음악",
+            "토론", "방송", "사진", "과학", "신문",
+            "종교", "봉사", "학술", "친목", "외국어"};
+    final String[] militaryStatusArray = {"미선택", "군필", "미필", "해당없음"};
+    final String[] abroadExperienceArray = {"미선택", "영어권", "비영어권", "경험없음"};
+
+    ActivityProfileModifyBinding binding;
+    Profile mProfile;
+    int[] selectedPosArray = new int[6];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_modify);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile_modify);
+        mProfile = SaveSharedPreference.getProfile(this);
+        selectedPosArray = SaveSharedPreference.getSelectedPosArray();
 
-        Profile mProfile=SaveSharedPreference.getProfile(this);
+        ArrayAdapter<String> religionAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, religionArray);
+        ArrayAdapter<String> hobbyAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, hobbyArray);
+        ArrayAdapter<String> collegeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, collegeArray);
+        ArrayAdapter<String> circleAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, circleArray);
+        ArrayAdapter<String> abroadExperienceAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, abroadExperienceArray);
+        ArrayAdapter<String> militaryStatusAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, militaryStatusArray);
 
-        final CircleImageView proPhotoImage=(CircleImageView)findViewById(R.id.iv_profilePhoto);
-        final TextView proNameText=(TextView)findViewById(R.id.et_profileName);
-        final TextView proSexText=(TextView)findViewById(R.id.et_profileSex);
-        final TextView proStateMsgText=(TextView)findViewById(R.id.et_profileStateMsg);
-        final TextView proAgeText=(TextView)findViewById(R.id.et_profileAge);
-        final TextView proHeightText=(TextView)findViewById(R.id.et_profileHeight);
-        final TextView proAddressText=(TextView)findViewById(R.id.et_profileAddress);
-        final TextView proHobbyText=(TextView)findViewById(R.id.et_profileHobby);
-        final TextView proUniversityText=(TextView)findViewById(R.id.et_profileUniversity);
-        final TextView proMajorText=(TextView)findViewById(R.id.et_profileMajor);
+        religionAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        hobbyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        collegeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        circleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        abroadExperienceAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        militaryStatusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Set Profile Layout
-        proPhotoImage.setImageResource(R.drawable.yonghyeon); // Need Modify
-        proNameText.setText(mProfile.getName());
-        proSexText.setText(mProfile.getSex());
-        proStateMsgText.setText(mProfile.getStateMsg());
-        proAgeText.setText(mProfile.getAge());
-        proHeightText.setText(mProfile.getHeight());
-        proAddressText.setText(mProfile.getAddress());
-        proHobbyText.setText(mProfile.getHobby());
-        proUniversityText.setText(mProfile.getUniversity());
-        proMajorText.setText(mProfile.getMajor());
+        binding.ivModifyPhoto.setImageResource(R.mipmap.ic_person_base); // Need Modify
+        binding.etModifyName.setText(mProfile.getName());
+        binding.etModifyStateMsg.setText(mProfile.getStateMsg());
+        binding.etModifyAge.setText(mProfile.getAge());
+        binding.etModifyHeight.setText(mProfile.getHeight());
+        binding.etModifyAddress.setText(mProfile.getAddress());
+        binding.etModifyMajor.setText(mProfile.getMajor());
 
-        final Button modifyCompleteButton=(Button)findViewById(R.id.btn_modifyComplete);
-        modifyCompleteButton.setOnClickListener(new View.OnClickListener() {
+        binding.spModifyReligion.setAdapter(religionAdapter);
+        binding.spModifyHobby.setAdapter(hobbyAdapter);
+        binding.spModifyCollege.setAdapter(collegeAdapter);
+        binding.spModifyCircle.setAdapter(circleAdapter);
+        binding.spModifyAbroadExperience.setAdapter(abroadExperienceAdapter);
+        binding.spModifyMilitaryStatus.setAdapter(militaryStatusAdapter);
+
+        binding.spModifyReligion.setSelection(selectedPosArray[0]);
+        binding.spModifyHobby.setSelection(selectedPosArray[1]);
+        binding.spModifyCollege.setSelection(selectedPosArray[2]);
+        binding.spModifyCircle.setSelection(selectedPosArray[3]);
+        binding.spModifyAbroadExperience.setSelection(selectedPosArray[4]);
+        binding.spModifyMilitaryStatus.setSelection(selectedPosArray[5]);
+
+        binding.btnModifyComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // access Server
-                finish();
+                // send modified Profile into server
+                mProfile.setName(binding.etModifyName.getText().toString());
+                mProfile.setStateMsg(binding.etModifyStateMsg.getText().toString());
+                mProfile.setAge(binding.etModifyAge.getText().toString());
+                mProfile.setHeight(binding.etModifyHeight.getText().toString());
+                mProfile.setAddress(binding.etModifyAddress.getText().toString());
+                mProfile.setMajor(binding.etModifyMajor.getText().toString());
+                SaveSharedPreference.setProfile(mProfile);
+                SaveSharedPreference.setSelectedPosArray(selectedPosArray);
+                backToMain();
+            }
+        });
+
+        binding.btnModifyCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backToMain();
+            }
+        });
+
+        binding.spModifyReligion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setReligion(religionArray[position]);
+                selectedPosArray[0] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyHobby.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setHobby(hobbyArray[position]);
+                selectedPosArray[1] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyCollege.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setCollege(collegeArray[position]);
+                selectedPosArray[2] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyCircle.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setCircle(circleArray[position]);
+                selectedPosArray[3] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyAbroadExperience.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setAbroadExperience(abroadExperienceArray[position]);
+                selectedPosArray[4] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        binding.spModifyMilitaryStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                mProfile.setMilitaryStatus(militaryStatusArray[position]);
+                selectedPosArray[5] = position;
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
     }
+
+    public void backToMain() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra("position", 2);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 }

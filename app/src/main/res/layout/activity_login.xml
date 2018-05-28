@@ -1,104 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#ffffffff"
-    android:gravity="center">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.project.network.ssugaeting.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="24dp"
-        android:paddingStart="60dp"
-        android:paddingEnd="60dp"
-        android:paddingBottom="24dp">
-
-        <ImageView
-            android:id="@+id/iv_ssuLogo"
-            android:src="@drawable/ssu_logo"
-            android:layout_width="100dp"
-            android:layout_height="50dp"/>
-
-        <ImageView
-            android:id="@+id/iv_appName"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:src="@drawable/app_name" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="36dp"
-        android:paddingEnd="36dp">
+        android:layout_height="match_parent"
+        android:background="#ffffffff"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:paddingBottom="24dp"
+            android:paddingEnd="60dp"
+            android:paddingStart="60dp"
+            android:paddingTop="24dp">
 
-            <EditText
-                android:id="@+id/et_inputID"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/user_id" />
+            <ImageView
+                android:id="@+id/iv_ssuLogo"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ssu_logo" />
 
-            <EditText
-                android:id="@+id/et_inputPW"
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/user_password" />
+            <ImageView
+                android:id="@+id/iv_appName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@drawable/app_name" />
+
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_login"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/button_shape"
-            android:baselineAligned="false"
-            android:text="@string/login"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#ffffffff"/>
+            android:layout_height="wrap_content"
+            android:paddingEnd="36dp"
+            android:paddingStart="36dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_inputID"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_id" />
+
+                <EditText
+                    android:id="@+id/et_inputPW"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_password" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_shape"
+                android:baselineAligned="false"
+                android:text="@string/login"
+                android:textColor="#ffffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="24dp"
+            android:paddingEnd="36dp"
+            android:paddingStart="36dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="@string/register"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp"
+                android:text="@string/search_id"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:paddingStart="4dp"
+                android:text="@string/search_pw"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="24dp"
-        android:paddingStart="36dp"
-        android:paddingEnd="36dp"
-        android:paddingBottom="24dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/search_id"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="4dp"
-            android:paddingEnd="4dp"
-            android:text="@string/search_pw"
-            android:textSize="18sp"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</layout>

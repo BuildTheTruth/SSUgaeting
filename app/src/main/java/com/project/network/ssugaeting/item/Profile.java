@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by Jin on 2018-04-07.
  */
 
-public class Profile  implements Parcelable {
+public class Profile implements Parcelable {
     // Essential Information
     private String id;
     private String password;
@@ -20,16 +20,24 @@ public class Profile  implements Parcelable {
     private String height;
     private String address;
     private String hobby;
-    private String university;
+    private String college;
     private String major;
     private String imageURL;
+    private String religion;
+    private String circle;
+    private String abroadExperience;
+    private String militaryStatus;
 
-    public Profile(String name, String stateMsg) {
-        this.name=name;
-        this.stateMsg=stateMsg;
+    // Constructor of Essential Information
+    public Profile(String id, String password, String email, String name, String sex) {
+        this.id = id;
+        this.password = password;
+        this.email = email;
+        this.name = name;
+        this.sex = sex;
     }
 
-    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String university, String major, String imageURL) {
+    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String college, String major, String imageURL, String religion, String circle, String abroadExperience, String militaryStatus) {
         this.id = id;
         this.password = password;
         this.email = email;
@@ -40,10 +48,15 @@ public class Profile  implements Parcelable {
         this.height = height;
         this.address = address;
         this.hobby = hobby;
-        this.university = university;
+        this.college = college;
         this.major = major;
         this.imageURL = imageURL;
+        this.religion = religion;
+        this.circle = circle;
+        this.abroadExperience = abroadExperience;
+        this.militaryStatus = militaryStatus;
     }
+
 
     protected Profile(Parcel in) {
         id = in.readString();
@@ -56,9 +69,13 @@ public class Profile  implements Parcelable {
         height = in.readString();
         address = in.readString();
         hobby = in.readString();
-        university = in.readString();
+        college = in.readString();
         major = in.readString();
         imageURL = in.readString();
+        religion = in.readString();
+        circle = in.readString();
+        abroadExperience = in.readString();
+        militaryStatus = in.readString();
     }
 
     public static final Creator<Profile> CREATOR = new Creator<Profile>() {
@@ -113,8 +130,8 @@ public class Profile  implements Parcelable {
         this.hobby = hobby;
     }
 
-    public void setUniversity(String university) {
-        this.university = university;
+    public void setCollege(String college) {
+        this.college = college;
     }
 
     public void setMajor(String major) {
@@ -123,6 +140,22 @@ public class Profile  implements Parcelable {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public void setReligion(String religion) {
+        this.religion = religion;
+    }
+
+    public void setCircle(String circle) {
+        this.circle = circle;
+    }
+
+    public void setAbroadExperience(String abroadExperience) {
+        this.abroadExperience = abroadExperience;
+    }
+
+    public void setMilitaryStatus(String militaryStatus) {
+        this.militaryStatus = militaryStatus;
     }
 
     public String getId() {
@@ -165,8 +198,8 @@ public class Profile  implements Parcelable {
         return hobby;
     }
 
-    public String getUniversity() {
-        return university;
+    public String getCollege() {
+        return college;
     }
 
     public String getMajor() {
@@ -175,6 +208,22 @@ public class Profile  implements Parcelable {
 
     public String getImageURL() {
         return imageURL;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public String getCircle() {
+        return circle;
+    }
+
+    public String getAbroadExperience() {
+        return abroadExperience;
+    }
+
+    public String getMilitaryStatus() {
+        return militaryStatus;
     }
 
     @Override
@@ -194,8 +243,12 @@ public class Profile  implements Parcelable {
         dest.writeString(height);
         dest.writeString(address);
         dest.writeString(hobby);
-        dest.writeString(university);
+        dest.writeString(college);
         dest.writeString(major);
         dest.writeString(imageURL);
+        dest.writeString(religion);
+        dest.writeString(circle);
+        dest.writeString(abroadExperience);
+        dest.writeString(militaryStatus);
     }
 }

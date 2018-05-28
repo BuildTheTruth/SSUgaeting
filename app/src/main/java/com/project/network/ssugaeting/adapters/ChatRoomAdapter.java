@@ -5,8 +5,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import com.project.network.ssugaeting.item.Chatting;
-import com.project.network.ssugaeting.item_view.ChattingView;
+import com.project.network.ssugaeting.item.Chat;
+import com.project.network.ssugaeting.item_view.ChatRoomView;
 
 import java.util.ArrayList;
 
@@ -14,11 +14,11 @@ import java.util.ArrayList;
  * Created by Jin on 2018-04-08.
  */
 
-public class ChattingAdapter extends BaseAdapter {
-    private ArrayList<Chatting> items = new ArrayList<Chatting>();
+public class ChatRoomAdapter extends BaseAdapter {
+    private ArrayList<Chat> items = new ArrayList<Chat>();
     Context context;
 
-    public ChattingAdapter(Context context) {
+    public ChatRoomAdapter(Context context) {
         this.context = context;
     }
 
@@ -39,22 +39,22 @@ public class ChattingAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ChattingView mView = (ChattingView) convertView;
+        ChatRoomView mView = (ChatRoomView) convertView;
 
         if (convertView == null)
-            mView = new ChattingView(context.getApplicationContext());
+            mView = new ChatRoomView(context.getApplicationContext());
 
-        Chatting item = items.get(position);
-        mView.setOpponentName(item.getOpponentName());
-        mView.setMessage(item.getMessage());
-        mView.setTime(item.getTime());
-        mView.setCount(item.getCount());
-        mView.setOpponentImageURL(context.getApplicationContext(), item.getOpponentImageURL());
+        Chat item = items.get(position);
+        mView.setUserName(item.getUserName());
+        mView.setUserMsg(item.getUserMsg());
+        mView.setMsgTime(item.getMsgTime());
+        mView.setMsgCount(item.getMsgCount());
+        mView.setUserImageURL(context.getApplicationContext(), item.getUserImageURL());
 
         return mView;
     }
 
-    public void addItem(Chatting item) {
+    public void addItem(Chat item) {
         items.add(item);
     }
 

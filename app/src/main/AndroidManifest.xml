@@ -22,7 +22,9 @@
         <activity android:name=".activity.FindPwActivity" />
         <activity android:name=".activity.RegisterActivity" />
         <activity android:name=".activity.ProfileActivity" />
-        <activity android:name=".activity.ProfileModifyActivity"></activity>
+        <activity android:name=".activity.ProfileModifyActivity" />
+        <activity android:name=".activity.FilterActivity" />
+        <activity android:name=".activity.ChatRoomActivity"></activity>
     </application>
 
 </manifest>

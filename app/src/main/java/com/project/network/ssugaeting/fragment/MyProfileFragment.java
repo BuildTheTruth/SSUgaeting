@@ -1,6 +1,7 @@
 package com.project.network.ssugaeting.fragment;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,11 +14,15 @@ import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.activity.ProfileActivity;
 import com.project.network.ssugaeting.activity.ProfileModifyActivity;
 import com.project.network.ssugaeting.activity.SaveSharedPreference;
+import com.project.network.ssugaeting.databinding.FragmentMyprofileBinding;
 import com.project.network.ssugaeting.item.Profile;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MyProfileFragment extends Fragment {
+
+    FragmentMyprofileBinding binding;
+
     public MyProfileFragment() {
     }
 
@@ -33,42 +38,36 @@ public class MyProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_myprofile, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_myprofile, container, false);
 
-        Profile mProfile= SaveSharedPreference.getProfile(getContext());
-
-        final CircleImageView proPhotoImage=(CircleImageView)view.findViewById(R.id.iv_myPhoto);
-        final TextView proNameText=(TextView)view.findViewById(R.id.tv_myName);
-        final TextView proSexText=(TextView)view.findViewById(R.id.tv_mySex);
-        final TextView proStateMsgText=(TextView)view.findViewById(R.id.tv_myStateMsg);
-        final TextView proAgeText=(TextView)view.findViewById(R.id.tv_myAge);
-        final TextView proHeightText=(TextView)view.findViewById(R.id.tv_myHeight);
-        final TextView proAddressText=(TextView)view.findViewById(R.id.tv_myAddress);
-        final TextView proHobbyText=(TextView)view.findViewById(R.id.tv_myHobby);
-        final TextView proUniversityText=(TextView)view.findViewById(R.id.tv_myUniversity);
-        final TextView proMajorText=(TextView)view.findViewById(R.id.tv_myMajor);
-
-        final Button modifyButton=(Button)view.findViewById(R.id.btn_profileModify);
+        Profile mProfile = SaveSharedPreference.getProfile(getContext());
 
         // Set Profile Layout
-        proPhotoImage.setImageResource(R.drawable.yonghyeon); // Need Modify
-        proNameText.setText(mProfile.getName());
-        proSexText.setText(mProfile.getSex());
-        proStateMsgText.setText(mProfile.getStateMsg());
-        proAgeText.setText(mProfile.getAge());
-        proHeightText.setText(mProfile.getHeight());
-        proAddressText.setText(mProfile.getAddress());
-        proHobbyText.setText(mProfile.getHobby());
-        proUniversityText.setText(mProfile.getUniversity());
-        proMajorText.setText(mProfile.getMajor());
+        binding.ivMyPhoto.setImageResource(R.mipmap.ic_person_base); // Need Modify
+        binding.tvMyName.setText(mProfile.getName());
+        binding.tvMySex.setText(mProfile.getSex());
+        binding.tvMyStateMsg.setText(mProfile.getStateMsg());
+        binding.tvMyAge.setText(mProfile.getAge());
+        binding.tvMyHeight.setText(mProfile.getHeight());
+        binding.tvMyAddress.setText(mProfile.getAddress());
+        binding.tvMyMajor.setText(mProfile.getMajor());
+        binding.tvMyReligion.setText(mProfile.getReligion());
+        binding.tvMyHobby.setText(mProfile.getHobby());
+        binding.tvMyCollege.setText(mProfile.getCollege());
+        binding.tvMyCircle.setText(mProfile.getCircle());
+        binding.tvMyAbroadExperience.setText(mProfile.getAbroadExperience());
+        binding.tvMyMilitaryStatus.setText(mProfile.getMilitaryStatus());
 
-        modifyButton.setOnClickListener(new View.OnClickListener(){
+        binding.btnProfileModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getContext(), ProfileModifyActivity.class));
+                Intent intent = new Intent(getContext(), ProfileModifyActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 
+        View view = binding.getRoot();
         return view;
     }
 

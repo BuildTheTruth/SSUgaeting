@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_oppChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_oppChatPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="8dp"
+                android:src="@mipmap/ic_person_base" />
+
+            <TextView
+                android:id="@+id/tv_oppChatName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/iv_oppChatPhoto"
+                android:paddingBottom="2dp"
+                android:text="@string/user_name"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_oppChatMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_oppChatName"
+                android:layout_toRightOf="@id/iv_oppChatPhoto"
+                android:background="@drawable/opp_chat_shape"
+                android:padding="8dp"
+                android:text="@string/chat_message"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_oppChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_oppChatMsg"
+                android:layout_toRightOf="@id/tv_oppChatMsg"
+                android:paddingLeft="4dp"
+                android:text="오후 12:00"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_myChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_myChatMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/my_chat_shape"
+                android:padding="8dp"
+                android:text="@string/chat_message"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_myChatTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_myChatMsg"
+                android:layout_toLeftOf="@id/tv_myChatMsg"
+                android:paddingRight="4dp"
+                android:text="오후 12:00"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textColor="@color/colorChar"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

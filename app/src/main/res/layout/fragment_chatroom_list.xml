@@ -2,15 +2,15 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.project.network.ssugaeting.fragment.ProfileListFragment">
+    tools:context="com.project.network.ssugaeting.fragment.ChatRoomListFragment">
 
     <ListView
-        android:id="@+id/lv_profileList"
-        android:name="com.project.network.ssugaeting.ProfileFragment"
+        android:id="@+id/lv_chatRoomList"
+        android:name="com.project.network.ssugaeting.ChattingListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/item_profile" />
 
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_chatroom" />
 
 </layout>
