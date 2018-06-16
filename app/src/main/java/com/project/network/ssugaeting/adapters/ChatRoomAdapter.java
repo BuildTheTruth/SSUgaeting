@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.project.network.ssugaeting.item.Chat;
+import com.project.network.ssugaeting.item.ChatRoom;
 import com.project.network.ssugaeting.item_view.ChatRoomView;
 
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
  */
 
 public class ChatRoomAdapter extends BaseAdapter {
-    private ArrayList<Chat> items = new ArrayList<Chat>();
+    private ArrayList<ChatRoom> items = new ArrayList<>();
     Context context;
 
     public ChatRoomAdapter(Context context) {
@@ -44,17 +45,21 @@ public class ChatRoomAdapter extends BaseAdapter {
         if (convertView == null)
             mView = new ChatRoomView(context.getApplicationContext());
 
-        Chat item = items.get(position);
-        mView.setUserName(item.getUserName());
-        mView.setUserMsg(item.getUserMsg());
-        mView.setMsgTime(item.getMsgTime());
-        mView.setMsgCount(item.getMsgCount());
-        mView.setUserImageURL(context.getApplicationContext(), item.getUserImageURL());
+        ChatRoom item = items.get(position);
+
+        mView.setUserName(item.getProfile().getName());
+        if(!item.getChatList().isEmpty()) {
+            int last = item.getChatList().size() - 1;
+            mView.setUserMsg(item.getChatList().get(last).getSendMsg());
+            mView.setMsgTime(item.getChatList().get(last).getMsgTime());
+        }
+        mView.setMsgCount(item.getUnCheckMsgCnt());
+        mView.setUserImageURL(item.getProfile().getImageURI());
 
         return mView;
     }
 
-    public void addItem(Chat item) {
+    public void addItem(ChatRoom item) {
         items.add(item);
     }
 

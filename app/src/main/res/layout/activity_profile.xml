@@ -11,7 +11,7 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/iv_profilePhoto"
+                android:id="@+id/iv_profileImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="16dp"
@@ -21,7 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:stretchColumns="1">
 
                 <TableRow
                     android:layout_width="wrap_content"

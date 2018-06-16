@@ -45,15 +45,17 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/et_inputID"
+                    android:id="@+id/et_inputId"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete"
                     android:hint="@string/user_id" />
 
                 <EditText
-                    android:id="@+id/et_inputPW"
+                    android:id="@+id/et_inputPw"
                     android:layout_width="220dp"
                     android:layout_height="wrap_content"
+                    android:inputType="textPassword"
                     android:hint="@string/user_password" />
             </LinearLayout>
 
@@ -74,32 +76,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="24dp"
-            android:paddingEnd="36dp"
-            android:paddingStart="36dp"
-            android:paddingTop="24dp">
+            android:padding="24dp"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp"
+                android:id="@+id/tv_register"
                 android:text="@string/register"
                 android:textSize="18sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingEnd="12dp"
-                android:paddingStart="12dp"
-                android:text="@string/search_id"
-                android:textSize="18sp" />
+            <android.support.v4.widget.Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingEnd="4dp"
-                android:paddingStart="4dp"
+                android:id="@+id/tv_findId"
+                android:text="@string/search_id"
+                android:textSize="18sp" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_findPw"
                 android:text="@string/search_pw"
                 android:textSize="18sp" />
 

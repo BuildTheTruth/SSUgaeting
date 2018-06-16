@@ -47,7 +47,7 @@ public class ProfileAdapter extends BaseAdapter {
         Profile item=items.get(position);
         mView.setName(item.getName());
         mView.setStateMsg(item.getStateMsg());
-        mView.setImageURL(context.getApplicationContext(), item.getImageURL());
+        mView.setImageURL(item.getImageURI());
 
         return mView;
     }

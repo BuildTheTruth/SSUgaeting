@@ -25,14 +25,28 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/et_regID"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/user_id"
-                android:inputType="text"
-                android:maxLines="1"
-                android:singleLine="true" />
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_regId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/user_id"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btn_checkId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중복확인" />
+
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/tv_idCheck"
@@ -41,7 +55,7 @@
                 android:visibility="gone" />
 
             <EditText
-                android:id="@+id/et_regPW"
+                android:id="@+id/et_regPw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/user_password"
@@ -51,7 +65,7 @@
 
 
             <EditText
-                android:id="@+id/et_regPWC"
+                android:id="@+id/et_regPwCheck"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_check"
@@ -91,7 +105,7 @@
                     android:singleLine="true" />
 
                 <Button
-                    android:id="@+id/btn_confirmEmail"
+                    android:id="@+id/btn_certEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="인증" />
@@ -114,22 +128,28 @@
                     android:text="@string/user_sex"
                     android:textSize="18sp" />
 
-                <RadioButton
-                    android:id="@+id/rb_regMale"
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/male" />
+                    android:orientation="horizontal">
 
-                <RadioButton
-                    android:id="@+id/rb_regFemale"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:text="@string/female" />
+                    <RadioButton
+                        android:id="@+id/rb_regMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/male" />
 
+                    <RadioButton
+                        android:id="@+id/rb_regFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/female" />
+
+                </RadioGroup>
             </LinearLayout>
 
             <LinearLayout

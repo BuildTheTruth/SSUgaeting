@@ -9,7 +9,7 @@
         android:padding="8dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_chatPhoto"
+            android:id="@+id/iv_chatProImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@mipmap/ic_person_base" />
@@ -37,7 +37,7 @@
                 android:layout_below="@id/tv_chatName"
                 android:layout_toLeftOf="@id/tv_chatCnt"
                 android:maxLines="2"
-                android:text="@string/chat_message"
+                android:text="연결되지 않은 채팅방"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textColor="#7e7e7e"
                 android:textSize="12sp" />
@@ -50,7 +50,6 @@
                 android:layout_alignParentTop="true"
                 android:layout_margin="4dp"
                 android:alpha="0.6"
-                android:text="오후 12:00"
                 android:textAppearance="?attr/textAppearanceListItem"
                 android:textColor="#7e7e7e"
                 android:textSize="12sp" />
@@ -59,13 +58,12 @@
                 android:id="@+id/tv_chatCnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@id/tv_chatTime"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/tv_chatTime"
                 android:layout_margin="4dp"
                 android:background="@drawable/message_count"
                 android:gravity="center"
-                android:text="1"
+                android:text="0"
                 android:textColor="#ffffffff" />
 
         </RelativeLayout>

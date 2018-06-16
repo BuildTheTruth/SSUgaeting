@@ -16,16 +16,29 @@ import com.project.network.ssugaeting.adapters.ProfileAdapter;
 import com.project.network.ssugaeting.databinding.FragmentProfileListBinding;
 import com.project.network.ssugaeting.item.Profile;
 
+import java.util.ArrayList;
+
 public class ProfileListFragment extends Fragment {
 
-    private ProfileAdapter profileAdapter;
-
+    static ProfileAdapter profileAdapter;
     FragmentProfileListBinding binding;
 
-    public ProfileListFragment() {}
+    ArrayList<Profile> mProfileList = new ArrayList<>(100);
 
-    public static ProfileListFragment newInstance() {
-        return new ProfileListFragment();
+    public ProfileListFragment() {
+
+    }
+
+    public static ProfileListFragment newInstance(ArrayList<Profile> filteredProfileList) {
+        ProfileListFragment mProfileListFragment = new ProfileListFragment();
+        Bundle mBundle = new Bundle();
+        mBundle.putParcelableArrayList("FILTERED_PROFILES", filteredProfileList);
+        mProfileListFragment.setArguments(mBundle);
+        return mProfileListFragment;
+    }
+
+    public static void clearProfileList() {
+        profileAdapter.clearItem();
     }
 
     @Override
@@ -36,17 +49,14 @@ public class ProfileListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding= DataBindingUtil.inflate(inflater, R.layout.fragment_profile_list, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile_list, container, false);
         profileAdapter = new ProfileAdapter(getContext());
-
-        // sample
-        profileAdapter.addItem(new Profile("admin", "123", "admin@soongsil.ac.kr", "관리자","남성"));
-        profileAdapter.addItem(new Profile("id", "password", "email@soongsil.ac.kr", "김용현", "남성",
-                "좋은 사람 만나고 싶어요","23","180","서울시 상도동","사진",
-                "IT대학","컴퓨터학부","url","무교","친목",
-                "경험없음","미필"));
-
-        binding.lvProfileList.setAdapter(profileAdapter);
+        mProfileList = (ArrayList<Profile>) getArguments().get("FILTERED_PROFILES");
+        if (mProfileList != null) {
+            for (Profile profile : mProfileList)
+                profileAdapter.addItem(profile);
+            binding.lvProfileList.setAdapter(profileAdapter);
+        }
 
         binding.lvProfileList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -59,8 +69,7 @@ public class ProfileListFragment extends Fragment {
             }
         });
 
-        View view=binding.getRoot();
+        View view = binding.getRoot();
         return view;
     }
-
 }

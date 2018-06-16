@@ -3,44 +3,29 @@ package com.project.network.ssugaeting.item;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 /**
  * Created by Jin on 2018-04-08.
  */
 
-public class Chat implements Parcelable {
-    private String userId;
-    private String userName;
-    private String userImageURL;
-    private String userMsg;
+public class Chat implements Parcelable, Serializable {
+    private String sendMsg;
+    private String sendImageURI;
     private String msgTime;
-    private int msgCount;
     private int msgTurn;
 
-    // Constructor for display of ChatRoomListView
-    public Chat(String userName, String userMsg, String msgTime, int msgCount) {
-        this.userName = userName;
-        this.userMsg = userMsg;
+    public Chat(String sendMsg, String sendImageURI, String msgTime, int msgTurn) {
+        this.sendMsg = sendMsg;
+        this.sendImageURI = sendImageURI;
         this.msgTime = msgTime;
-        this.msgCount = msgCount;
-    }
-
-    public Chat(String userId, String userName, String userImageURL, String userMsg, String msgTime, int msgCount, int msgTurn) {
-        this.userId = userId;
-        this.userName = userName;
-        this.userImageURL = userImageURL;
-        this.userMsg = userMsg;
-        this.msgTime = msgTime;
-        this.msgCount = msgCount;
         this.msgTurn = msgTurn;
     }
 
     protected Chat(Parcel in) {
-        userId = in.readString();
-        userName = in.readString();
-        userImageURL = in.readString();
-        userMsg = in.readString();
+        sendMsg = in.readString();
+        sendImageURI = in.readString();
         msgTime = in.readString();
-        msgCount = in.readInt();
         msgTurn = in.readInt();
     }
 
@@ -63,45 +48,26 @@ public class Chat implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(userId);
-        dest.writeString(userName);
-        dest.writeString(userImageURL);
-        dest.writeString(userMsg);
+        dest.writeString(sendMsg);
+        dest.writeString(sendImageURI);
         dest.writeString(msgTime);
-        dest.writeInt(msgCount);
         dest.writeInt(msgTurn);
     }
 
-    public String getUserId() {
-        return userId;
+    public String getSendMsg() {
+        return sendMsg;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setSendMsg(String sendMsg) {
+        this.sendMsg = sendMsg;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getSendImageURI() {
+        return sendImageURI;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserImageURL() {
-        return userImageURL;
-    }
-
-    public void setUserImageURL(String userImageURL) {
-        this.userImageURL = userImageURL;
-    }
-
-    public String getUserMsg() {
-        return userMsg;
-    }
-
-    public void setUserMsg(String userMsg) {
-        this.userMsg = userMsg;
+    public void setSendImageURI(String sendImageURI) {
+        this.sendImageURI = sendImageURI;
     }
 
     public String getMsgTime() {
@@ -110,14 +76,6 @@ public class Chat implements Parcelable {
 
     public void setMsgTime(String msgTime) {
         this.msgTime = msgTime;
-    }
-
-    public int getMsgCount() {
-        return msgCount;
-    }
-
-    public void setMsgCount(int msgCount) {
-        this.msgCount = msgCount;
     }
 
     public int getMsgTurn() {

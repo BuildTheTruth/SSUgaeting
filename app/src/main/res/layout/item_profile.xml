@@ -9,7 +9,7 @@
         android:padding="8dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_userPhoto"
+            android:id="@+id/iv_userProImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@mipmap/ic_person_base" />

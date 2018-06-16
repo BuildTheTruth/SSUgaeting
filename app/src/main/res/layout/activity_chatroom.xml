@@ -82,7 +82,7 @@
             android:background="#ffffffff">
 
             <ImageView
-                android:id="@+id/iv_sendPhoto"
+                android:id="@+id/iv_sendImage"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_alignParentLeft="true"
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_toLeftOf="@id/iv_sendMsg"
-                android:layout_toRightOf="@id/iv_sendPhoto" />
+                android:layout_toRightOf="@id/iv_sendImage" />
 
             <ImageView
                 android:id="@+id/iv_sendMsg"

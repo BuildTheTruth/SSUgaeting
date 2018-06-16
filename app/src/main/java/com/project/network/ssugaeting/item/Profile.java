@@ -22,7 +22,7 @@ public class Profile implements Parcelable {
     private String hobby;
     private String college;
     private String major;
-    private String imageURL;
+    private String imageURI;
     private String religion;
     private String circle;
     private String abroadExperience;
@@ -37,7 +37,7 @@ public class Profile implements Parcelable {
         this.sex = sex;
     }
 
-    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String college, String major, String imageURL, String religion, String circle, String abroadExperience, String militaryStatus) {
+    public Profile(String id, String password, String email, String name, String sex, String stateMsg, String age, String height, String address, String hobby, String college, String major, String imageURI, String religion, String circle, String abroadExperience, String militaryStatus) {
         this.id = id;
         this.password = password;
         this.email = email;
@@ -50,7 +50,7 @@ public class Profile implements Parcelable {
         this.hobby = hobby;
         this.college = college;
         this.major = major;
-        this.imageURL = imageURL;
+        this.imageURI = imageURI;
         this.religion = religion;
         this.circle = circle;
         this.abroadExperience = abroadExperience;
@@ -71,7 +71,7 @@ public class Profile implements Parcelable {
         hobby = in.readString();
         college = in.readString();
         major = in.readString();
-        imageURL = in.readString();
+        imageURI = in.readString();
         religion = in.readString();
         circle = in.readString();
         abroadExperience = in.readString();
@@ -138,8 +138,8 @@ public class Profile implements Parcelable {
         this.major = major;
     }
 
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    public void setImageURI(String imageURI) {
+        this.imageURI = imageURI;
     }
 
     public void setReligion(String religion) {
@@ -206,8 +206,8 @@ public class Profile implements Parcelable {
         return major;
     }
 
-    public String getImageURL() {
-        return imageURL;
+    public String getImageURI() {
+        return imageURI;
     }
 
     public String getReligion() {
@@ -245,7 +245,7 @@ public class Profile implements Parcelable {
         dest.writeString(hobby);
         dest.writeString(college);
         dest.writeString(major);
-        dest.writeString(imageURL);
+        dest.writeString(imageURI);
         dest.writeString(religion);
         dest.writeString(circle);
         dest.writeString(abroadExperience);

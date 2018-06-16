@@ -1,6 +1,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.project.network.ssugaeting.activity.ProfileModifyActivity">
+    tools:context="com.project.network.ssugaeting.activity.ModifyProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:orientation="vertical">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/iv_modifyPhoto"
+                android:id="@+id/iv_modifyProImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_margin="16dp"
