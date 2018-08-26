@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.project.network.ssugaeting.R;
 import com.project.network.ssugaeting.adapters.ChatAdapter;
@@ -38,7 +37,6 @@ import java.util.Date;
 import java.util.StringTokenizer;
 
 import static com.project.network.ssugaeting.activity.MainActivity.DIRECTORY_PATH;
-import static com.project.network.ssugaeting.activity.MainActivity.FTP_PATH;
 
 public class ChatRoomActivity extends AppCompatActivity {
     private static final String TAG = "ChatRoomActivity";
