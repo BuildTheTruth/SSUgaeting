@@ -6,5 +6,4 @@ package com.project.network.ssugaeting.mail;
 
 public class Config {
     public static final String EMAIL ="corrhd123@gmail.com";
-    public static final String PASSWORD ="dkwnlffk25";
-}
+    public static final String PASSWORD = "";
